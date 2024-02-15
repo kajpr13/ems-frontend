@@ -180,7 +180,7 @@ const Notes = () => {
 
       if (currentNote.trim() !== '') {
 
-        const response = await fetch(`http://localhost:8080/addInternalNote/3/${currentNote}`, {
+        const response = await fetch(`https://ems-backend-production-9474.up.railway.app/addInternalNote/3/${currentNote}`, {
 
           method: "POST",
 

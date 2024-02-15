@@ -86,7 +86,7 @@ const EmployeeForm = () => {
     setEditMode(false);
 
     try {
-      const response = await axios.put(`http://localhost:8080/editEmployee/2`, {
+      const response = await axios.put(`https://ems-backend-production-9474.up.railway.app/editEmployee/2`, {
         // emp_name: "Ram",
         // email: "abc@gmail.com",
         // contact_no: 8899009988,

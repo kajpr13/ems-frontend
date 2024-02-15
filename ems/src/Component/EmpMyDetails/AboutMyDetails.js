@@ -28,7 +28,7 @@ export default function AboutMyDetails() {
     const fetchUserDetails = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8080/findEmployeeByEmail/${username}`
+          `https://ems-backend-production-9474.up.railway.app/findEmployeeByEmail/${username}`
         );
         const data = await response.json();
         setEmployeeData(data);
@@ -43,7 +43,7 @@ export default function AboutMyDetails() {
     const fetchReportingManagerDetails = async () => {
       try {
         // Replace 'API_URL' with the actual URL of the reporting manager API
-        const response = await fetch(`http://localhost:8080/findReportingManager/${empId}`);
+        const response = await fetch(`https://ems-backend-production-9474.up.railway.app/findReportingManager/${empId}`);
         const data = await response.json();
         setReportingManagerData(data.emp_name);
         console.log("reportingManagerData:", data.emp_name); 
@@ -58,7 +58,7 @@ export default function AboutMyDetails() {
   }, [username,empId]);
   const resignEmployee = async () => {
     try {
-      const response = await fetch(`http://localhost:8080/deleteEmployee/${empId}`, {
+      const response = await fetch(`https://ems-backend-production-9474.up.railway.app/deleteEmployee/${empId}`, {
         method: 'PUT',
       });
       if (!response.ok) {

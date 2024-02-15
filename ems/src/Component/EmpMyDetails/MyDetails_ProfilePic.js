@@ -459,7 +459,7 @@ export default function MyDetails_ProfilePic() {
     const fetchUserDetails = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8080/findEmployeeByEmail/${username}`
+          `https://ems-backend-production-9474.up.railway.app/findEmployeeByEmail/${username}`
         );
         const data = await response.json();
         setEmpname(data.emp_name);
@@ -475,7 +475,7 @@ export default function MyDetails_ProfilePic() {
   useEffect(() => {
     const fetchProfilePicture = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/viewProfilePicture/${empId}`);
+        const response = await fetch(`https://ems-backend-production-9474.up.railway.app/viewProfilePicture/${empId}`);
         if (response.ok) {
           const blob = await response.blob();
           setProfilePicture(URL.createObjectURL(blob));
@@ -530,7 +530,7 @@ export default function MyDetails_ProfilePic() {
       formData.append('file', file);
     
       try {
-        const response = await fetch(`http://localhost:8080/addProfilePicture/${empId}`, {
+        const response = await fetch(`https://ems-backend-production-9474.up.railway.app/addProfilePicture/${empId}`, {
           method: 'PUT',
           body: formData,
         });
@@ -545,7 +545,7 @@ export default function MyDetails_ProfilePic() {
         setError(null);
     
         // Fetch the updated profile picture after successful upload
-        const updatedResponse = await fetch(`http://localhost:8080/viewProfilePicture/${empId}`);
+        const updatedResponse = await fetch(`https://ems-backend-production-9474.up.railway.app/viewProfilePicture/${empId}`);
         if (updatedResponse.ok) {
           const blob = await updatedResponse.blob();
           const newProfilePicture = URL.createObjectURL(blob);

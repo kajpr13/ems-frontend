@@ -224,7 +224,7 @@ const AddDepartmentForm = () => {
     }
    
     try {
-      const response = await fetch("http://localhost:8080/addDepartment", {
+      const response = await fetch("https://ems-backend-production-9474.up.railway.app/addDepartment", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

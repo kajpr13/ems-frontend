@@ -237,7 +237,7 @@ export default function Otp() {
 
     try {
       // Make a GET API call to verify the OTP
-      const response = await fetch(`http://localhost:8080/verifyOtp/${otp}`, {
+      const response = await fetch(`https://ems-backend-production-9474.up.railway.app/verifyOtp/${otp}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

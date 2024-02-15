@@ -26,7 +26,7 @@ export default function MyDetailsDesc() {
     const fetchUserDetails = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8080/findEmployeeByEmail/${username}`
+          `https://ems-backend-production-9474.up.railway.app/findEmployeeByEmail/${username}`
         );
         const data = await response.json();
         setUserDetails(data);
@@ -192,7 +192,7 @@ export default function MyDetailsDesc() {
   const updateUserDetails = async (updatedDetails) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/editEmployee/${empId}`,
+        `https://ems-backend-production-9474.up.railway.app/editEmployee/${empId}`,
         {
           method: "PUT",
           headers: {
@@ -216,7 +216,7 @@ export default function MyDetailsDesc() {
   useEffect(() => {
     const fetchFileData = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/viewFile/${empId}/1`);
+        const response = await fetch(`https://ems-backend-production-9474.up.railway.app/viewFile/${empId}/1`);
         const data = await response.json();
         // Filter files for education and identity
         const eduFileNames = ["10th Certificate", "12th Certificate", "Graduation Certificate","Post Gradution Certificate"];
@@ -230,7 +230,7 @@ export default function MyDetailsDesc() {
         
         const fetchStatus = async (fileId) => {
           try {
-            const response = await fetch(`http://localhost:8080/findStatusById/${fileId}`);
+            const response = await fetch(`https://ems-backend-production-9474.up.railway.app/findStatusById/${fileId}`);
             const statusData = await response.text();
             return statusData;
           } catch (error) {
@@ -315,7 +315,7 @@ export default function MyDetailsDesc() {
   };
   const handleDeleteFile = async (fileId) => {
     try {
-      const response = await fetch(`http://localhost:8080/deleteFile/${fileId}`, {
+      const response = await fetch(`https://ems-backend-production-9474.up.railway.app/deleteFile/${fileId}`, {
         method: 'DELETE',
       });
       if (response.ok) {
@@ -561,7 +561,7 @@ export default function MyDetailsDesc() {
          {status === 'pending' && <FaClock className="pending-icon" />}
          {status === 'approved' && <FaCheck className="approved-icon" />}</p>
         <a
-          href={`http://localhost:8080/viewFileById/${fileId}`}
+          href={`https://ems-backend-production-9474.up.railway.app/viewFileById/${fileId}`}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -597,7 +597,7 @@ export default function MyDetailsDesc() {
         <p className="mydetailsdesc-label">{fileName}  {status === 'pending' && <FaClock className="pending-icon" />}
   {status === 'approved' && <FaCheck className="approved-icon" />}</p>
         <a
-          href={`http://localhost:8080/viewFileById/${fileId}`}
+          href={`https://ems-backend-production-9474.up.railway.app/viewFileById/${fileId}`}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -636,7 +636,7 @@ export default function MyDetailsDesc() {
   {status === 'approved' && <FaCheck className="approved-icon" />}
   </p>
         <a
-          href={`http://localhost:8080/viewFileById/${fileId}`}
+          href={`https://ems-backend-production-9474.up.railway.app/viewFileById/${fileId}`}
           target="_blank"
           rel="noopener noreferrer"
         >

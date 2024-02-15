@@ -6,7 +6,7 @@ const YourComponent = ({ postId }) => {
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/findCommentsByPostId/${postId}`);
+        const response = await fetch(`https://ems-backend-production-9474.up.railway.app/findCommentsByPostId/${postId}`);
         if (response.ok) {
           const commentsData = await response.json();
           setComments(commentsData);

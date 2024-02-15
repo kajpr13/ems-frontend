@@ -135,7 +135,7 @@ export default function EmployeeRegistrationForm() {
   useEffect(() => {
     const fetchDepartmentData = async () => {
       try {
-        const response = await fetch("http://localhost:8080/getAllDepartments");
+        const response = await fetch("https://ems-backend-production-9474.up.railway.app/getAllDepartments");
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -161,7 +161,7 @@ export default function EmployeeRegistrationForm() {
   }, []);
   const fetchReportingManagers = async () => {
     try {
-      const response = await fetch("http://localhost:8080/findAllManagers"
+      const response = await fetch("https://ems-backend-production-9474.up.railway.app/findAllManagers"
         
       );
       const data = await response.json();
@@ -464,7 +464,7 @@ export default function EmployeeRegistrationForm() {
         // console.log(fdropdown.value);
 
         // Send a POST request to the backend with the modified form data
-        const response = await fetch("http://localhost:8080/addEmployee", {
+        const response = await fetch("https://ems-backend-production-9474.up.railway.app/addEmployee", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
