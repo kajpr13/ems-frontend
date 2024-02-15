@@ -1,0 +1,82 @@
+/* <tr class="p-organizationchart-lines" data-pc-section="lines" style="visibility: inherit;"><td colspan="8" data-pc-section="linecell"><div class="p-organizationchart-line-down" data-pc-section="linedown"></div></td></tr> */
+
+/* td.p-organizationchart-line-left {
+  border-right: 2px solid black;
+}
+.p-organizationchart-line-down {
+  border: 1px solid black;
+}
+.p-organizationchart-line-top {
+  border-top: 2px solid black;
+} */
+
+.tree{
+  margin-left:120px;
+}
+.node {
+  position: relative; /* Position relative to the parent node */
+}
+
+.node::before {
+  content: '';
+  position: absolute;
+  top: 50%; /* Adjust as needed based on node height */
+  left: 50%;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc; /* Adjust line color as needed */
+  transform: translate(-50%, -50%); /* Center the line */
+  z-index: 1;
+}
+
+
+.node.expanded > .children::after {
+  display: none; /* Hide lines for expanded nodes */
+}
+.children {
+  z-index: 0; /* Push nodes behind lines */
+}
+
+.organizationchart-demo .card {
+  overflow-x: auto;
+}
+
+.organizationchart-demo .p-organizationchart .p-person {
+  padding: 0;
+  border: 0 none;
+}
+
+.organizationchart-demo .p-organizationchart .node-header, .organizationchart-demo .p-organizationchart .node-content {
+  padding: .5em .7rem;
+}
+
+.organizationchart-demo .p-organizationchart .node-header {
+  background-color: #495ebb;
+  color: #ffffff;
+}
+
+.organizationchart-demo .p-organizationchart .node-content {
+  text-align: center;
+  border: 1px solid #495ebb;
+}
+
+.organizationchart-demo .p-organizationchart .node-content img {
+  border-radius: 50%;
+}
+
+.organizationchart-demo .p-organizationchart .department-cfo {
+  background-color: #7247bc;
+  color: #ffffff;
+}
+
+.organizationchart-demo .p-organizationchart .department-coo {
+  background-color: #a534b6;
+  color: #ffffff;
+}
+
+.org-tree{
+  width:100vw;
+  height: 68vh;
+  margin-left:200px;
+  border:2px solid red;
+}
