@@ -288,7 +288,7 @@ const Notes = () => {
     try {
       if (currentNote.trim() !== '') {
         
-        const response = await fetch(`https://ems-backend-production-3f3d.up.railway.app/editNote/&{empId}/&{noteId}/${currentNote}`, {
+        const response = await fetch(`https://ems-backend-production-3f3d.up.railway.app/editNote/${empId}/${editedNoteIndex}/${currentNote}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
