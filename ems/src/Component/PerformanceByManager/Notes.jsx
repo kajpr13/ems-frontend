@@ -255,7 +255,7 @@ const Notes = () => {
     try {
       if (currentNote.trim() !== '') {
         
-        const response = await fetch(`https://ems-backend-production-3f3d.up.railway.app/addInternalNote/3/${currentNote}`, {
+        const response = await fetch(`https://ems-backend-production-3f3d.up.railway.app/addInternalNote/${empId}/${currentNote}`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -288,7 +288,7 @@ const Notes = () => {
     try {
       if (currentNote.trim() !== '') {
         
-        const response = await fetch(`https://ems-backend-production-3f3d.up.railway.app/editNote/3/43/${currentNote}`, {
+        const response = await fetch(`https://ems-backend-production-3f3d.up.railway.app/editNote/${empId}/${noteId}/${currentNote}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -321,7 +321,7 @@ const Notes = () => {
   const deleteNote = async (index) => {
     try {
       if (currentNote.trim() !== '') {
-        const response = await fetch(`https://ems-backend-production-3f3d.up.railway.app/deleteNote/3/${currentNote}`, {
+        const response = await fetch(`https://ems-backend-production-3f3d.up.railway.app/deleteNote/${empId}/${currentNote}`, {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json',
