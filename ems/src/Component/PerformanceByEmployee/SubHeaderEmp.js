@@ -42,13 +42,13 @@ export default function SubHeader() {
               <option value="FeedbackReceive" selected={activeButton === "FeedbackReceive"}>Feedback_Receive</option>
          </select>
 <button
-              className={activeButton === "Notes" ? "subheaderemp-each-content active" : "each-content"}
+              className={activeButton === "Notes" ? "subheaderemp-each-content active" : "subheaderemp-each-content"}
               onClick={() => handleButtonClick("Notes")}
 >
               Internal Notes
 </button>
 <button
-              className={activeButton === "Achievement" ? "subheaderemp-each-content active" : "each-content"}
+              className={activeButton === "Achievement" ? "subheaderemp-each-content active" : "subheaderemp-each-content"}
               onClick={() => handleButtonClick("Achievement")}
 >
             Achievement

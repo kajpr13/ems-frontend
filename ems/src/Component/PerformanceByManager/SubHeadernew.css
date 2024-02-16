@@ -1,6 +1,6 @@
 
 
-.header-sub {
+.subheader-manager-header-sub {
   height: 50px;
   
   color: white;
@@ -12,11 +12,11 @@
   left: 0;
   box-shadow: 0 2px 5px rgba(3, 3, 3, 0.2);
 }
-.subheader-content{
+.subheader-manager-subheader-content{
   color: black;
   
 }
-.each-content{
+.subheader-manager-each-content{
   padding: 5px;
   border: none;
   border-bottom: 2px solid blue;
@@ -29,7 +29,7 @@
   
  
 }
-.each-content:hover{
+.subheader-manager-each-content:hover{
   background:#d8d4d8;
   color: black;
   box-shadow: 0 2px 5px rgba(3, 3, 3, 0.2);
@@ -37,7 +37,7 @@
   border-radius: 5px;
 }
 
-.each-content.active {
+.subheader-manager-each-content.active {
   background:#d8d4d8;
   color: black;
   border: none;
