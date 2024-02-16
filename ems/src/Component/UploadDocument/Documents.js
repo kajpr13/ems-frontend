@@ -32,7 +32,7 @@ const PersonalDocument = () => {
   useEffect(() => {
     const fetchExistingDocumentNames = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/viewFile/${empId}/1`);
+        const response = await fetch(`https://ems-backend-production-9474.up.railway.app/viewFile/${empId}/1`);
         const data = await response.json();
         const documentNames = Object.values(data);
         setExistingDocumentNames(documentNames);
@@ -122,7 +122,7 @@ const PersonalDocument = () => {
         }
     
         // Construct the URL with parameters
-        const apiUrl = `http://localhost:8080/uploadFile/${empId}/${encodeURIComponent(documentName)}/1`;
+        const apiUrl = `https://ems-backend-production-9474.up.railway.app/uploadFile/${empId}/${encodeURIComponent(documentName)}/1`;
     
         // Create FormData object to append file data
         // const formData = new FormData();
@@ -149,7 +149,7 @@ const PersonalDocument = () => {
         // Optional: Handle success, show a success message, etc.
         console.log('File uploaded successfully');
         messagesRef.current.show({ severity: 'success', summary: 'Success', detail: 'File uploaded successfully' });
-        const statusResponse = await fetch(`http://localhost:8080/findStatusById/${fileId}`);
+        const statusResponse = await fetch(`https://ems-backend-production-9474.up.railway.app/findStatusById/${fileId}`);
     const statusData = await statusResponse.json();
     setprimaryDetailsStatus(statusData.status); // Assuming primaryDetailsStatus represents the status of the newly added document
 

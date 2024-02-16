@@ -97,7 +97,7 @@ const AchievementDocument = () => {
         return;
       }
 
-      const apiUrl = `http://localhost:8080/uploadFile/${empId}/${encodeURIComponent(
+      const apiUrl = `https://ems-backend-production-9474.up.railway.app/uploadFile/${empId}/${encodeURIComponent(
         certificateName
       )}/2`;
       const formData = new FormData();

@@ -50,7 +50,7 @@ const Taskassign = () => {
     // Fetch data from the API
    
     const fetchData = async () => {
-      const apiUrl = `http://localhost:8080/findByEmployeeEntityEmpId/1`;
+      const apiUrl = `https://ems-backend-production-9474.up.railway.app/findByEmployeeEntityEmpId/1`;
       try {
         const response = await axios.get(apiUrl);
         setTasks(response.data);
@@ -66,7 +66,7 @@ const Taskassign = () => {
     return value == 100 ? '#4caf50' : value < 100 && value >= 75 ? '#006994' : value < 75 && value >= 50 ? '#ff9800' : value < 50 ? '#f44336' : null;
   };
   const sendEmail = (taskId, status) => {
-    const apiUrl = `http://localhost:8080/changeStatus/${taskId}/${status}`;
+    const apiUrl = `https://ems-backend-production-9474.up.railway.app/changeStatus/${taskId}/${status}`;
     axios.post(apiUrl, {
       // Provide any necessary data for sending the email, such as recipient, subject, body, etc.
       // You can pass this data in the request body

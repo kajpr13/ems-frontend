@@ -463,7 +463,7 @@ export default function TaskAssignByManager() {
  
   const handleAssign = async () => {
     try {
-      const response = await fetch('http://localhost:8080/addTask', {
+      const response = await fetch('https://ems-backend-production-9474.up.railway.app/addTask', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -499,7 +499,7 @@ export default function TaskAssignByManager() {
   useEffect(() => {
     const fetchPriorities = async () => {
       try {
-        const response = await axios.put('http://localhost:8080/updatePriorityLevel/1/1');
+        const response = await axios.put('https://ems-backend-production-9474.up.railway.app/updatePriorityLevel/1/1');
         setPriorities(response.data);
       } catch (error) {
         console.error('Error fetching priorities:', error);
@@ -526,7 +526,7 @@ export default function TaskAssignByManager() {
  
   const fetchTasks = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/findByEmployeeEntityEmpId/2');
+      const response = await axios.get('https://ems-backend-production-9474.up.railway.app/findByEmployeeEntityEmpId/2');
       setTasks(response.data);
       setSearchResults(response.data);
     } catch (error) {
@@ -539,9 +539,9 @@ export default function TaskAssignByManager() {
       let response;
  
       if (searchBy === "Priority") {
-        response = await axios.get(`http://localhost:8080/findTasksByPriority/${keyword}`);
+        response = await axios.get(`https://ems-backend-production-9474.up.railway.app/findTasksByPriority/${keyword}`);
       } else {
-        response = await axios.get(`http://localhost:8080/findByEmployeeEntityEmpId/2`);
+        response = await axios.get(`https://ems-backend-production-9474.up.railway.app/findByEmployeeEntityEmpId/2`);
       }
  
       setTasks(response.data);

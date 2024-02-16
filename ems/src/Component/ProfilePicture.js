@@ -67,7 +67,7 @@ export default function ProfilePicture() {
       const fetchUserDetails = async () => {
         try {
           const response = await fetch(
-            `http://localhost:8080/findEmployeeByEmail/${username}`
+            `https://ems-backend-production-9474.up.railway.app/findEmployeeByEmail/${username}`
           );
           const data = await response.json();
           setEmpname(data.emp_name || "");
@@ -84,7 +84,7 @@ export default function ProfilePicture() {
     useEffect(() => {
       const fetchProfilePicture = async () => {
         try {
-          const response = await fetch(`http://localhost:8080/viewProfilePicture/${empId}`);
+          const response = await fetch(`https://ems-backend-production-9474.up.railway.app/viewProfilePicture/${empId}`);
           if (response.ok) {
             const blob = await response.blob();
             setProfilePicture(URL.createObjectURL(blob));
