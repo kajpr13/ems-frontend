@@ -108,7 +108,7 @@ const Feedback = () => {
   const [feedbackData, setFeedbackData] = useState([]);
 useEffect(() => {
     // Replace 'your-api-url' with the actual URL of your Spring Boot application
-    axios.get("http://localhost:8080/findFeedbackByEmpId/4")
+    axios.get("https://ems-backend-production-9474.up.railway.app/findFeedbackByEmpId/4")
         .then(response => {
             setFeedbackData(response.data);
             console.log(response.data);

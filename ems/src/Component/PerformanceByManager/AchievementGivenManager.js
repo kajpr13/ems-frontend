@@ -345,7 +345,7 @@ const AchievementManager = () => {
   const [showNoRecordsMessage, setShowNoRecordsMessage] = useState(false);
 
   useEffect(() => {
-    axios.get("http://localhost:8080/viewFiles")
+    axios.get("https://ems-backend-production-9474.up.railway.app/viewFiles")
       .then(response => {
         const updatedAchievements = Object.entries(response.data).map(([id, documentName]) => ({
           Id: id,
@@ -384,7 +384,7 @@ const AchievementManager = () => {
 
   const handleSave = async (achievementId, selectedStatus) => {
     try {
-      const apiUrl = `http://localhost:8080/changeFileStatus/${achievementId}/${selectedStatus}`;
+      const apiUrl = `https://ems-backend-production-9474.up.railway.app/changeFileStatus/${achievementId}/${selectedStatus}`;
       const response = await axios.put(apiUrl, {});
       
       if (response.status === 200) {
@@ -400,7 +400,7 @@ const AchievementManager = () => {
   };
 
   const openFile = (fileId) => {
-    const fileUrl = `http://localhost:8080/viewFileById/${fileId}`
+    const fileUrl = `https://ems-backend-production-9474.up.railway.app/viewFileById/${fileId}`
     window.open(fileUrl, '_blank');
   };
 

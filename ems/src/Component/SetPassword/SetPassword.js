@@ -129,7 +129,7 @@ export default function SetPassword() {
     if (isPasswordValid && doPasswordsMatch) {
       try {
         // Make a PUT API call to set the password
-        const response = await fetch(`http://localhost:8080/resetPassword/${username}/${pass}`, {
+        const response = await fetch(`https://ems-backend-production-9474.up.railway.app/resetPassword/${username}/${pass}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",

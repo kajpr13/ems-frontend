@@ -14,7 +14,7 @@ const Achievement = () => {
   const [achievementsData, setAchievementData] = useState([]);
   useEffect(() => {
     // Replace 'your-api-url' with the actual URL of your Spring Boot application
-    axios.get("http://localhost:8080/viewFiles")
+    axios.get("https://ems-backend-production-9474.up.railway.app/viewFiles")
         .then(response => {
             setAchievementData(response.data);
             const updatedAchievements = Object.entries(response.data).map(([id, documentname]) => ({
@@ -70,14 +70,14 @@ const Achievement = () => {
 // };
 const openFile = (fileId) => {
   // Replace 'http://localhost:8080/viewFileById/' with the actual URL of your endpoint
-  const fileUrl = `http://localhost:8080/viewFileById/${fileId}`
+  const fileUrl = `https://ems-backend-production-9474.up.railway.app/viewFileById/${fileId}`
 
   // Open the file URL in a new tab
   window.open(fileUrl, '_blank');
 };
 
 const deleteFile = (fileId) => {
-  const fileUrl = `http://localhost:8080/deleteFile/${fileId}`;
+  const fileUrl = `https://ems-backend-production-9474.up.railway.app/deleteFile/${fileId}`;
 
   axios.delete(fileUrl)
     .then(response => {
