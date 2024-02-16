@@ -155,16 +155,16 @@ useEffect(() => {
  
   return (
     <div className="Feedback-container">
-      <div className="table-container">
-        <table className="custom-table">
+      <div className="feedback-receive-table-container">
+        <table className="feedback-receive-custom-table">
           <thead>
             <tr>
-              <th className="tableheader">S.No</th>
+              <th className="feedback-receive-tableheader">S.No</th>
               
-              <th className="tableheader">Task</th>
-              <th className="tableheader">Feedback</th>
-              <th className="tableheader">Given By</th>
-              <th className="tableheader">Rating</th>
+              <th className="feedback-receive-tableheader">Task</th>
+              <th className="feedback-receive-tableheader">Feedback</th>
+              <th className="feedback-receive-tableheader">Given By</th>
+              <th className="feedback-receive-tableheader">Rating</th>
              
             </tr>
           </thead>

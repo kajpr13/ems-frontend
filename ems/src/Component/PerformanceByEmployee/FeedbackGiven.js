@@ -228,48 +228,48 @@ const FeedbackByManager = () => {
   };
 
   return (
-    <div className="FeedbackBymanager-container">
-      <div className="filter-search">
+    <div className="FeedbackByEmp-container">
+      <div className="feedback-given-filter-search">
         <select
           id="searchBy"
           value={searchBy}
           onChange={(e) => setSearchBy(e.target.value)}
         >
-          <option value="GivenTo" className="select-option">
+          <option value="GivenTo" className="feedback-given-select-option">
             Given To
           </option>
-          <option value="Rating" className="select-option">
+          <option value="Rating" className="feedback-given-select-option">
             Rating
           </option>
         </select>
         <input
           type="text"
           id="keyword"
-          className="search-field"
+          className="feedback-given-search-field"
           placeholder="Search Employee"
           value={keyword}
           onChange={(e) => setKeyword(e.target.value)}
         />
-        <button onClick={handleSearch} className="search-button">
-          <RiSearchLine className="search-icon" />
+        <button onClick={handleSearch} className="feedback-given-search-button">
+          <RiSearchLine className="feedback-given-search-icon" />
         </button>
       </div>
-      <div className="table-container">
-        <table className="custom-table">
+      <div className="feedback-given-table-container">
+        <table className="feedback-given-custom-table">
           <thead>
             <tr>
-              <th className="tableheader">Task</th>
-              <th className="tableheader">Feedback</th>
-              <th className="tableheader">Given To</th>
-              <th className="tableheader">Rating</th>
-              <th className="tableheader">Given</th>
-              <th className="tableheader">Delete</th>
+              <th className="feedback-given-tableheader">Task</th>
+              <th className="feedback-given-tableheader">Feedback</th>
+              <th className="feedback-given-tableheader">Given To</th>
+              <th className="feedback-given-tableheader">Rating</th>
+              <th className="feedback-given-tableheader">Given</th>
+              <th className="feedback-given-tableheader">Delete</th>
             </tr>
           </thead>
           <tbody>
             {searchResults.map((FeedbackGiven) => (
               <tr key={FeedbackGiven.Id}>
-                <td className="inputField">
+                <td className="feedback-given-inputField">
                   {editingId === FeedbackGiven.Id ? (
                     <input
                       type="text"
@@ -277,13 +277,13 @@ const FeedbackByManager = () => {
                       onChange={(e) =>
                         setNewFeedback({ ...newFeedback, Task: e.target.value })
                       }
-                      className="small-input"
+                      className="feedback-given-small-input"
                     />
                   ) : (
                     `${FeedbackGiven.Task}`
                   )}
                 </td>
-                <td className="inputField">
+                <td className="feedback-given-inputField">
                   {editingId === FeedbackGiven.Id ? (
                     <input
                       type="text"
@@ -291,20 +291,20 @@ const FeedbackByManager = () => {
                       onChange={(e) =>
                         setNewFeedback({ ...newFeedback, Feedback: e.target.value })
                       }
-                      className="small-input"
+                      className="feedback-given-small-input"
                     />
                   ) : (
                     `${FeedbackGiven.Feedback}`
                   )}
                 </td>
-                <td className="inputField">
+                <td className="feedback-given-inputField">
                   {editingId === FeedbackGiven.Id ? (
                     <select
                       value={newFeedback.GivenTo}
                       onChange={(e) =>
                         setNewFeedback({ ...newFeedback, GivenTo: e.target.value })
                       }
-                      className="small-input"
+                      className="feedback-given-small-input"
                     >
                       {givenToOptions.map((option) => (
                         <option key={option} value={option} selected={newFeedback.GivenTo === option}>
@@ -316,7 +316,7 @@ const FeedbackByManager = () => {
                     `${FeedbackGiven.GivenTo}`
                   )}
                 </td>
-                <td className="inputField">
+                <td className="feedback-given-inputField">
                   {editingId === FeedbackGiven.Id ? (
                     <Rating
                       value={newFeedback.Rating}
@@ -332,14 +332,14 @@ const FeedbackByManager = () => {
                 <td>
                   {editingId === FeedbackGiven.Id ? (
                     <button
-                      className="completedButton"
+                      className="feedback-given-completedButton"
                       onClick={handleGiven}
                     >
                       Save
                     </button>
                   ) : (
                     <button
-                      className="completedButton"
+                      className="feedback-given-completedButton"
                       onClick={() => handleEdit(FeedbackGiven.Id)}
                     >
                       Edit
@@ -348,7 +348,7 @@ const FeedbackByManager = () => {
                 </td>
                 <td>
                   <button
-                    className="completedButton"
+                    className="feedback-given-completedButton"
                     onClick={() => handleApprove(FeedbackGiven.Id)}
                   >
                     Delete
@@ -369,7 +369,7 @@ const FeedbackByManager = () => {
                   onChange={(e) =>
                     setNewFeedback({ ...newFeedback, Task: e.target.value })
                   }
-                  className="small-input"
+                  className="feedback-given-small-input"
                 />
               </td>
               <td>
@@ -379,7 +379,7 @@ const FeedbackByManager = () => {
                   onChange={(e) =>
                     setNewFeedback({ ...newFeedback, Feedback: e.target.value })
                   }
-                  className="small-input"
+                  className="feedback-given-small-input"
                 />
               </td>
               <td>
@@ -388,7 +388,7 @@ const FeedbackByManager = () => {
                   onChange={(e) =>
                     setNewFeedback({ ...newFeedback, GivenTo: e.target.value })
                   }
-                  className="small-input"
+                  className="feedback-given-small-input"
                 >
                   {givenToOptions.map((option) => (
                     <option key={option} value={option} selected={newFeedback.GivenTo === option}>
@@ -406,7 +406,7 @@ const FeedbackByManager = () => {
               </td>
               <td>
                 <button
-                  className="completedButton"
+                  className="feedback-given-completedButton"
                   onClick={handleGiven}
                 >
                   Give
@@ -414,7 +414,7 @@ const FeedbackByManager = () => {
               </td>
               <td>
                 <button
-                  className="completedButton"
+                  className="feedback-given-completedButton"
                   onClick={() => handleApprove(newFeedback.Id)}
                 >
                   Delete
@@ -426,7 +426,7 @@ const FeedbackByManager = () => {
       </div>
 
       {error && (
-        <div className="error-message">
+        <div className="feedback-given-error-message">
           {error}
         </div>
       )}

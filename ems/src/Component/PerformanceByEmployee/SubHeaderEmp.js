@@ -33,22 +33,22 @@ export default function SubHeader() {
  
   return (
 <div>
-<nav className="navbar header-sub">
-<div className="container">
-<div className="subheader-content">
+<nav className="subheaderemp-navbar header-sub">
+<div className="subheaderemp-container">
+<div className="subheaderemp-subheader-content">
 <select onChange={(e) => handleButtonClick(e.target.value)}>
               {/* <option value="Feedback" selected={activeButton === "Feedback"} >Feedback</option> */}
               <option value="FeedbackGiven" selected={activeButton === "FeedbackGiven"}>Feedback_Given</option>
               <option value="FeedbackReceive" selected={activeButton === "FeedbackReceive"}>Feedback_Receive</option>
          </select>
 <button
-              className={activeButton === "Notes" ? "each-content active" : "each-content"}
+              className={activeButton === "Notes" ? "subheaderemp-each-content active" : "each-content"}
               onClick={() => handleButtonClick("Notes")}
 >
               Internal Notes
 </button>
 <button
-              className={activeButton === "Achievement" ? "each-content active" : "each-content"}
+              className={activeButton === "Achievement" ? "subheaderemp-each-content active" : "each-content"}
               onClick={() => handleButtonClick("Achievement")}
 >
             Achievement
@@ -56,7 +56,7 @@ export default function SubHeader() {
 </div>
 </div>
 </nav>
-<div className="component-container">
+<div className="subheaderemp-component-container">
         {/* Render the component based on the activeButton state */}
         {renderComponent()}
 </div>
