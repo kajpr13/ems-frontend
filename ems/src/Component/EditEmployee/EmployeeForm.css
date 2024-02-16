@@ -1,5 +1,4 @@
-
-.employee-form {
+.employeeform-employee-form {
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
@@ -8,50 +7,46 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.form-row {
+.employeeform-form-row {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
 
-.form-column {
+.employeeform-form-column {
   flex: 1;
   margin-top: 10px;
 }
 
-.EmployeeId {
+.employeeform-EmployeeId {
   width: 90px;
   padding: 8px;
   margin-bottom: 15px;
   box-sizing: border-box;
 }
 
-.edit-employee-label {
+label {
   display: block;
   margin-bottom: 10px;
 }
 
-.edit-employee-input
-{
+input,
+select {
   width: 90%;
   padding: 8px;
   margin-bottom: 15px;
   box-sizing: border-box;
 }
 
-.edit-employee-dropdown {
+.employeeform-employee-dropdown {
   padding: 8px;
   border: 3px solid #ccc;
   border-radius: 20px;
   margin-right: 10px;
   font-size: 14px;
-  width: 90%;
-  padding: 8px;
-  margin-bottom: 15px;
-  box-sizing: border-box;
 }
 
-.Submit-button {
+.employeeform-Submit-button {
   background-color: rgb(10, 102, 222);
   color: white;
   padding: 10px 15px;
@@ -60,11 +55,11 @@
   cursor: pointer;
 }
 
-.Submit-button:hover {
+.employeeform-Submit-button:hover {
   background: linear-gradient(to right, blue, rgb(198, 121, 231));
 }
 
-.employee-button {
+.employeeform-employee-button {
   position: absolute;
   background-color: rgb(10, 102, 222);
   color: white;
@@ -75,7 +70,7 @@
   cursor: pointer;
 }
 
-.employee-button:hover {
+.employeeform-employee-button:hover {
   background: linear-gradient(to right, blue, rgb(198, 121, 231));
 }
 
@@ -84,7 +79,7 @@
   font-weight: bolder;
 }
 
-.delete-button {
+.employeeform-delete-button {
   margin-left: 50px;
   margin-bottom: -34px;
   background-color: rgb(10, 102, 222);
@@ -94,7 +89,7 @@
   border-radius: 50px;
   cursor: pointer;
 }
-.delete-button:hover {
+.employeeform-delete-button:hover {
   background: linear-gradient(to right, blue, rgb(198, 121, 231));
 }
 
@@ -116,18 +111,18 @@ body::before {
   z-index: -1;
 }
 
-.checkbox-container {
+.employeeform-checkbox-container {
   display: flex;
   align-items: center;
 }
 
-.checkbox-label {
+.employeeform-checkbox-label {
   position: relative;
   cursor: pointer;
   padding-left: 25px; /* Adjust spacing between the checkbox and the label */
 }
 
-.checkbox-input {
+.employeeform-checkbox-input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -135,7 +130,7 @@ body::before {
 
 }
 
-.custom-checkbox {
+.employeeform-custom-checkbox {
   position: absolute;
   top: 0;
   left: 0;
@@ -145,21 +140,21 @@ body::before {
 }
 
 /* Styling when the checkbox is checked */
-.checkbox-input:checked ~ .custom-checkbox {
+.employeeform-checkbox-input:checked ~ .custom-checkbox {
   background-color: rgb(10, 102, 222); /* Change background color when checked */
 }
 
-.custom-checkbox:after {
+.employeeform-custom-checkbox:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-.checkbox-input:checked ~ .custom-checkbox:after {
+.employeeform-checkbox-input:checked ~ .custom-checkbox:after {
   display: block;
 }
 
-.custom-checkbox:after {
+.employeeform-custom-checkbox:after {
   left: 6px;
   top: 2px;
   width: 6px;

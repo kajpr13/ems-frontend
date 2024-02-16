@@ -1,5 +1,4 @@
-
-.task-container {
+.Taskassign-manager-TaskAssignBymanager-container {
    
   display: flex;
   z-index: -1;
@@ -13,14 +12,14 @@ position: fixed;
 margin-left: -35px;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
-.header-image {
+.Taskassign-manager-header-image {
   width: 12%; /* Adjust the width as needed */
-  height: 10%;
+  height: 10%; 
   margin-top: 18px;
   margin-bottom: -20px;
   text-align: center;
 }
-.add-buttons {
+.Taskassign-manager-add-buttons {
 text-align: center;
 border: none;
 background-color: rgb(10, 102, 222);
@@ -34,52 +33,52 @@ padding-top:8px;
 font-weight: 600;
 box-shadow: 0 2px 5px rgba(3, 3, 3, 0.653);
 }
-.button-container {
+.Taskassign-manager-button-container {
 display: flex;
 margin-bottom: 50px;
 gap:40px;
 }
- 
- 
-.button-container {
+
+
+.Taskassign-manager-button-container {
 display: flex;
 justify-content: space-between;
 margin-bottom: 40px;
 }
-.filter-container {
+.Taskassign-manager-filter-container {
 display: flex;
 align-items: center;
 margin-bottom: 20px;
 }
- 
-.select-container {
+
+.Taskassign-manager-select-container {
 margin-left: 10px;
 }
- 
-.search-container {
+
+.Taskassign-manager-search-container {
 display: flex;
 align-items: center;
 margin-bottom: 20px;
 }
- 
-.input-container {
+
+.Taskassign-manager-input-container {
 margin-left: 10px;
 }
-.filter-search{
+.Taskassign-manager-filter-search{
 align-items: center;
 padding-top: 20px;
 gap:10px;
 width: 60vw;
 display: inline-flex;
 }
-.filter-search label {
+.Taskassign-manager-filter-search label {
 margin-right: 10px;
 font-weight: bold;
- 
+
 color: #333;
 }
- 
-.filter-search select{
+
+.Taskassign-manager-filter-search select{
 padding: 8px;
 border: 3px solid #ccc;
 border-radius: 20px;
@@ -87,8 +86,8 @@ margin-top: 35px;
 margin-right: 10px;
 font-size: 14px;
 }
- 
-.filter-search input{
+
+.Taskassign-manager-filter-search input{
 padding: 8px;
 border: 3px solid #ccc;
 border-radius: 30px;
@@ -98,7 +97,7 @@ transition: border-color 0.3s;
 margin-top: 35px;
 width: 480px;
 }
-.search-button {
+.Taskassign-manager-search-button {
 background-color: rgb(10, 102, 222);
 color: white;
 border: none;
@@ -110,15 +109,15 @@ font-size: 14px;
 margin-bottom: 10px;
 box-shadow: 0 2px 5px rgba(3, 3, 3, 0.653);
 }
- 
-.search-button:hover {
+
+.Taskassign-manager-search-button:hover {
 background: linear-gradient(to right,blue,rgb(198, 121, 231));
 }
-.add-buttons:hover {
+.Taskassign-manager-add-buttons:hover {
 background: linear-gradient(to left,blue,rgb(198, 121, 231));
 color: white;}
- 
-.completedButton {
+
+.Taskassign-manager-completedButton {
 background-color: blue;
 color: white;
 border: none;
@@ -127,45 +126,45 @@ font-size: 14px;
 border-radius: 50px;
 cursor: pointer;
 }
- 
- 
-.completedButton:hover {
+
+
+.Taskassign-manager-completedButton:hover {
 background: linear-gradient(to right, blue, rgb(198, 121, 231));
 }
- 
-.table-container {
+
+.Taskassign-manager-table-container {
 margin-top: 20px;
 width: 80px;
 margin-right: 950px;
- 
+
 margin-top: 35px;
 }
- 
-.custom-table {
+
+.Taskassign-manager-custom-table {
 width: 100px;
 border-collapse: collapse;
- 
+
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
- 
-.custom-table th, .custom-table td {
+
+.Taskassign-manager-custom-table th, .custom-table td {
 padding: 5px;
 text-align: left;
 border-bottom: 0.5px solid #ddd;
 line-height: 1.2;
 }
- 
-.custom-table th {
+
+.Taskassign-manager-custom-table th {
 /* background-color: rgb(10, 102, 222); */
 color: rgb(8, 8, 8);
 background-image: url("https://images.unsplash.com/photo-1701221238491-d5247ff7abcc?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
- 
+
 }
- 
-.custom-table tbody tr:hover {
+
+.Taskassign-manager-custom-table tbody tr:hover {
 background-color: #f5f5f5;
 }
-.small-input1{
+.Taskassign-manager-small-input1{
 width: 100%;
 padding: 8px;
 box-sizing: border-box;
@@ -173,7 +172,7 @@ border: 1px solid #ccc;
 border-radius: 4px;
 margin-top: 4px; /* Add margin to separate input fields */
 }
- 
+
 body::before {
   content: "Pursuit Software";
   font-family: sans-serif;
@@ -185,6 +184,5 @@ body::before {
   left: 50%;
   transform: translate(-50%, -50%) rotate(-20deg);
   z-index: -1;
-}
- 
- 
+} 
+
